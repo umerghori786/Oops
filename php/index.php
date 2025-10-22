@@ -80,7 +80,7 @@ print_r($model);
 $request_type = 'products';
 match ($request_type) {
              	'users' => $model = "<br> users match",
-             	'products'=>$model = "<br> products matched",
+             	'products'=>$model = "<br> products matched ",
              	default => $model = "<br>not founded",
              };     
 
