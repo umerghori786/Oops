@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>popup</title>
+
+    <style>
+
+
+
+
+
+
+
+      /* common popup */
+      .single-popup-wraper {
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        overflow: auto;
+        height: 100vh;
+        /* display: none; */
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+      }
+      .single-popup {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 100%;
+        max-width: 800px;
+        max-height: 80vh;
+        overflow: auto;
+      }
+      .single-popup .fa-times {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        color: #fff;
+      }
+      .single-popup .body {
+        padding: 20px;
+      }
+      .single-popup .bg-btn {
+        background-color: #794eda;
+        color: #fff;
+      }
+      .single-popup .title {
+        padding: 10px 20px;
+        margin: 0;
+        background-color: #794eda;
+        color: #fff;
+      }
+      .single-popup .body .head {
+        color: #000;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+
+
+
+    <!-- popup -->
+    <div class="single-popup-wraper yaha-par-aik-new-class-laga-k-show-hide-karo">
+      <div class="single-popup">
+        <h6 class="title">
+          Aprendizaje de la semana Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate!
+          <i class="fas fa-times fa-times-close"></i>
+        </h6>
+        <div class="body">
+          <div>Para un óptimo aprendizaje deberás ver un mínimo de 4 vídeos cada semana. Un total de 30 o 45 minutos.</div>
+          <div class="text-right">
+            <button class="btn btn-sm bg-btn">De acuerdo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+      $('.fa-times-close').click(function(){
+            $('.single-popup-wraper').hide()
+        })
+    </script>
+
+    
+  </body>
+</html>

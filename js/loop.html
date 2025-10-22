@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+<button style="color: blue;" onclick="cartobject()">cart button</button>
+
+
+
+<script type="text/javascript">
+
+	function cartobject()
+	{
+		var cartobject = [
+
+				{id : 1 , title : 'first title' , price : 20 , quantity : 4},
+				{id : 2 , title : 'second title' , price : 40 , quantity : 2},
+				{id : 3 , title : 'third title' , price : 60 , quantity : 3},
+				{id : 4 , title : 'fourth title' , price : 70 , quantity : 6},
+				{id : 5 , title : 'fifth title' , price : 90 , quantity : 7},
+				{id : 6 , title : 'sixth title' , price : 70 , quantity : 6},
+				{id : 7 , title : 'seventh title' , price : 90 , quantity : 7},
+			];
+		var id = 1;
+		var dummycartItem = {id : id , title : 'dummy title' , price : 20 , quantity : 4};
+		/*==============================================some loop===================================*/
+		/*===========================================================================================*/
+		var check = cartobject.some((item)=>{
+
+			return item.id === id; 
+		});
+		//var check = cartobject.some((item)=>item.id === id)
+		
+		
+		/*==================================Map loop(give true false)=============================*/
+		/*===========================================================================================*/
+
+		if(!check)
+		{
+			cart.push(dummycartItem);
+		}else{
+
+			cartobject.map((item)=>{
+
+				if(item.id === id)
+				{
+					item.quantity++;
+				}
+			});
+		}
+		console.log(cartobject)
+	}
+
+
+
+	/*==============================filter loop (gives object)=========================*/
+	/*=================================================================================*/
+
+	var cartobjectfilter = [
+
+				{id : 1 , title : 'first title' , price : 20 , quantity : 4 , category :{id : 2 , title :'action'}},
+				{id : 2 , title : 'second title' , price : 40 , quantity : 2 , category :{id : 3 , title :'romance'}},
+				{id : 3 , title : 'third title' , price : 60 , quantity : 3 , category :{id : 2 , title :'action'}},
+				{id : 4 , title : 'fourth title' , price : 70 , quantity : 6 , category :{id : 1 , title :'thriller'}},
+				{id : 5 , title : 'fifth title' , price : 90 , quantity : 7 , category :{id : 3 , title :'romance'}},
+				{id : 6 , title : 'sixth title' , price : 70 , quantity : 6 , category :{id : 2 , title :'action'}},
+				{id : 7 , title : 'seventh title' , price : 90 , quantity : 7 , category :{id : 1 , title :'thriller'}},
+			];
+	var id = 2;
+
+	var newcartobject = cartobjectfilter.filter((item)=>item.id !== id)
+	console.log(newcartobject);
+	//var categoires = cartobjectfilter.map((item)=>item.category)
+
+	var sort = [3,2];
+
+	const newobject = cartobjectfilter.filter((item)=>sort.includes(item.category.id))
+
+	var total = 0;
+	cartobjectfilter.map((item)=>total+=item.price)
+		
+	//console.log(total)
+
+
+
+
+
+	
+</script>
+</body>
+</html>

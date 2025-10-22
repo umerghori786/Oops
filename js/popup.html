@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<style type="text/css">
+		.single-popup-wraper{
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        overflow: auto;
+        height: 100vh;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+    .single-popup{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        width: 100%;
+        max-width: 900px;
+    }
+    .single-popup .fa-times{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .single-popup .body{
+        padding: 20px;
+    }
+    .single-popup .bg-btn{
+        background-color: #794EDA;
+        color: #fff;
+    }
+    .single-popup .title{
+        padding: 10px 20px;
+        margin: 0;
+        background-color: #794EDA;
+        color: #fff;
+    }
+    .single-popup .body .head{
+        color: #000;
+        font-weight: 600;
+        font-size:
+        18px;
+    }
+	</style>
+</head>
+<body>
+<div class="single-popup-wraper umer" >
+    <div class="single-popup">
+        <h6 class="title">
+            Aprendizaje de la semana Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, cupiditate!
+            <i class="fas fa-times"></i>
+        </h6>
+        <div class="body">
+            <div>Para un óptimo aprendizaje deberás ver un mínimo de 4 vídeos cada semana. Un total de 30 o 45 minutos.</div>
+            <div class="text-right">
+                <button class="btn btn-sm bg-btn">De acuerdo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
