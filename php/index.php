@@ -81,7 +81,7 @@ $request_type = 'products';
 match ($request_type) {
              	'users' => $model = "<br> users match",
              	'products'=>$model = "<br> products match",
-             	default => $model = "<br>not found hy ",
+             	default => $model = "<br>not found",
              };     
 
              print_r($model);        
